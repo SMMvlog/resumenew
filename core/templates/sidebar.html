@@ -1,0 +1,14 @@
+{% load static %}
+<div class="border-end border-warning h-100">
+<div class="text-center">
+<img src="{% static 'images/mhb.jpg' %}" class="img-fluid rounded-circle mt-5" width="100px" height="100px" alt="Profile Image">
+<h4 class="text-white mt-3 fonth">Mehboob Shaikh</h3>
+</div>
+<hr class="border">
+<nav class="nav flex-column text-center">
+<a href="{% url 'home' %}" class="nav-link {{home}}">Home</a>
+<a href="{% url 'serv' %}" class="nav-link {{serv}}">Services</a>
+<a href="{% url 'skill' %}" class="nav-link {{skill}}">Skill</a>
+<a href="{% url 'contact' %}" class="nav-link {{contact}}">Contact</a>
+</nav>
+</div>

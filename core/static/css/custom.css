@@ -1,0 +1,37 @@
+.pimg{
+    border-radius:50%;
+}
+
+.fonth{
+    font-family: 'Dancing Script', cursive;
+}
+
+html,body{
+    height:100%;
+}
+.container-fluid{
+    min-height: 100%;
+}
+
+.i-color{
+    color: chartreuse;
+}
+
+.p-color{
+    color:whitesmoke;
+}
+
+a.nav-link{
+    color:whitesmoke;
+}
+
+a.nav-link:hover{
+    color:black;
+    background-color: aquamarine;
+}
+
+a.nav-link.active{
+      background-color: green;
+      font-weight: bold;
+      font-style: oblique;
+}

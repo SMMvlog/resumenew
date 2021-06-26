@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block sidebar %}{% endblock sidebar %}
+
+{% block content %}
+<div class="container">
+<h1 class="text-warning mt-5 mb-5 border-bottom"> CONTACT Revewer </h1>
+<div class="row text-white mb-5">
+
+ <div class="col-sm-9 mb-5">
+ <form action="" method="post" class="shadow p-5 rounded-3" onsubmit="return check()" style="background-color:#222f22;">
+ {% csrf_token %}
+<div class="row mb-2">
+<div class="col-md-6">
+<label for="name">Name:</label>
+<input type="text" class="form-control" name="name" id="name" placeholder="Your Full Name">
+<span id="error_name" name="error" class="mb-3 p-5"></span> 
+</div>
+
+<div class="col-md-6">
+<label for="email">Email ID:</label>
+<input type="text" class="form-control" name="email" id="email" placeholder="enter your email id"> 
+<span id="error_email" class="mb-3 p-5"></span>
+</div>
+</div>
+
+<div class="form-group">
+<label for="subject">Subject</label>
+<input type="text" class="form-control" name="subject" id="subject" placeholder=" type your subject">
+<span id="error_subject" class="mb-3 p-5"></span>
+</div> 
+<div class="form-group mt-2">
+<label for="message">message:</label>
+<textarea class="form-control" name="message" id="message"></textarea>
+<span id="error_message" class="mb-3 p-5"></span>
+</div>
+<div class="form-group mt-2">
+<label for="message">Reply:</label>
+<textarea class="form-control" name="rply" id="rply"></textarea>
+<span id="error_message" class="mb-3 p-5"></span>
+</div>
+<button class="btn btn-success mt-3" id="btn">Send</button>
+ </form>
+ </div>
+ 
+</div>
+</div>
+<div class="text-center mb-3">
+<a href="" target="_blank" class="p-3 i-color"> <i class="fab fa-twitter fa-2x"></i> </a>
+<a href="" target="_blank" class="p-3 i-color"> <i class="fab fa-facebook fa-2x"></i></i> </a>
+<a href="" target="_blank" class="p-3 i-color"> <i class="fab fa-instagram fa-2x"></i></i> </a>
+<a href="" target="_blank" class="p-3 i-color"> <i class="fab fa-github-square fa-2x"></i></i> </a>
+</div>
+
+{% endblock content %}

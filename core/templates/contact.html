@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+{% if messages %}
+{% for message in messages %}
+<script>
+alert('{{message}}')
+</script>
+{% endfor %}
+{% endif %}
+{% block content %}
+<div class="container">
+<h1 class="text-warning mt-5 mb-5 border-bottom"> CONTACT US </h1>
+<div class="row text-white mb-5">
+<p class="mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us. I will come back to you within
+ a hours.</p>
+ <div class="col-sm-9 mb-5">
+ <form action="" method="post" class="shadow p-5 rounded-3" onsubmit="return check()" style="background-color:#222f22;">
+ {% csrf_token %}
+<div class="row mb-2">
+<div class="col-md-6">
+<label for="name">Full Name:</label>
+<input type="text" class="form-control" name="name" id="name" placeholder="Your Full Name">
+<span id="error_name" name="error" class="mb-3 p-5"></span> 
+</div>
+
+<div class="col-md-6">
+<label for="email">EMAIL:</label>
+<input type="text" class="form-control" name="email" id="email" placeholder="enter your email id"> 
+<span id="error_email" class="mb-3 p-5"></span>
+</div>
+</div>
+
+<div class="form-group">
+<label for="subject">Your Subject</label>
+<input type="text" class="form-control" name="subject" id="subject" placeholder=" type your subject">
+<span id="error_subject" class="mb-3 p-5"></span>
+</div> 
+<div class="form-group mt-2">
+<label for="message">message:</label>
+<textarea class="form-control" name="message" id="message"></textarea>
+<span id="error_message" class="mb-3 p-5"></span>
+</div>
+<button class="btn btn-success mt-3" id="btn">send</button>
+ </form>
+ </div>
+ <div class="col-sm-3 text-center">
+ <ul class="list-unstyled">
+ <li>
+ <i class="fas fa-map-marker-alt fa-2x i-color"></i>
+ <p> <a href="https://maps.google.com/maps?=mumbra+thane+Maharashtra" target="_blank" style="color:white;"> Mumbra,Thane, Maharashtra</a></p>
+ </li>
+ <li>
+ <i class="fas fa-phone fa-2x i-color"></i>
+ <p><a href="tel:+91 9022721275" target="_blank" style="color:white;">+91 9022721275</a></p>
+ </li>
+ <li>
+ <i class="fas fa-envelope fa-2x i-color"></i>
+ <p><a href="mailto:mehboob61923@gmail.com" target="_blank" style="color:white;"> mehboob61923@gmail.com </a></p>
+ </li>
+ </ul>
+ </div>
+</div>
+</div>
+<div class="text-center mb-3">
+<a href="" target="_blank" class="p-3 i-color"> <i class="fab fa-twitter fa-2x"></i> </a>
+<a href="" target="_blank" class="p-3 i-color"> <i class="fab fa-facebook fa-2x"></i></i> </a>
+<a href="" target="_blank" class="p-3 i-color"> <i class="fab fa-instagram fa-2x"></i></i> </a>
+<a href="" target="_blank" class="p-3 i-color"> <i class="fab fa-github-square fa-2x"></i></i> </a>
+</div>
+
+{% endblock content %}

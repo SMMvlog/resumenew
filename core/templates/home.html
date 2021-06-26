@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="mt-3">
+<div class="text-center">
+<img src="{% static 'images/mhb.jpg' %}" class="img-thumbnail mt-5" width="250px" height="250px" alt="Profile Image">
+</div>
+<div class="mt-5 text-white mx-5 text-justify ">
+<h1 class="font-weight-bold fonth"> Hello, </h3>
+
+<div class="px-4" style="line-height:2rem;">
+<p style="text-indent:100px;"> I am <b class="text-warning fonth"> Mehboob Shaikh </b> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias architecto sequi corporis aliquam unde sint officiis explicabo. Totam dicta magnam
+ enim itaque numquam doloribus adipisci distinctio odit eum blanditiis! Tempore!
+ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque reprehenderit voluptas perferendis! Iure error cumque excepturi doloribus, id quibusdam repellat unde maiores rerum.
+  Ratione fugit autem, sit assumenda laboriosam ex. Lorem ipsum dolor sit, amet consectetur
+   adipisicing elit. Quaerat aliquam officiis, obcaecati velit reiciendis nesciunt quos vitae. 
+   Id, sint praesentium molestiae repellat quo eaque omnis, error perferendis,
+   mollitia reiciendis alias accusamus incidunt. Lorem ipsum dolor sit amet consectetur
+    adipisicing elit. Cum similique fugiat ea laudantium impedit repudiandae minus, 
+    veniam repellendus incidunt quia repellat odio, vitae dolor modi, natus voluptatum fugit sed aperiam laboriosam reprehenderit eaque! Quidem doloremque, dolorem, voluptatum qui aut dicta id facere quod, animi tempore mollitia enim natus unde dolores doloribus! Excepturi consectetur eius, 
+   et ipsa voluptatem fugit itaque ex accusantium dolor odio rem.</p>
+</div>
+</div>
+<div class="text-center">
+<a href="{% url 'contact' %}" class="btn btn-outline-warning my-2 mx-3">Hire me</a>
+<a href="{% url 'contact' %}" class="btn btn-outline-info my-2 mx-3">Contact</a>
+</div>
+</div>
+{% endblock content %}
